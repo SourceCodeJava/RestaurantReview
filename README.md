@@ -19,7 +19,3 @@ This code base is to implement a restaurant review API with the below functional
  Calculate and expose:
  Average rating per restaurant
  Top 3 restaurants by cuisine type
-
-please find the link to video
-
-https://youtu.be/L7j0xAiofm0?si=tcOp0hlz4m1kjhTI
