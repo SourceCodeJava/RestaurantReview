@@ -1,0 +1,14 @@
+com\codecademy\dining\DiningApplication.class
+com\codecademy\dining\repository\RestaurantRepository.class
+com\codecademy\dining\controller\DiningUserController.class
+com\codecademy\dining\exception\DuplicateEntityException.class
+com\codecademy\dining\model\DiningUser.class
+com\codecademy\dining\controller\RestaurantController.class
+com\codecademy\dining\repository\DiningUserRepository.class
+com\codecademy\dining\controller\AdminController.class
+com\codecademy\dining\controller\ReviewController.class
+com\codecademy\dining\repository\ReviewRepository.class
+com\codecademy\dining\model\ReviewStatus.class
+com\codecademy\dining\model\Restaurant.class
+com\codecademy\dining\model\Review.class
+com\codecademy\dining\model\AdminAction.class
