@@ -31,31 +31,24 @@ public class ReviewService {
 
 	public Review save(ReviewDTO review) {
 		Review newReview = new Review(review);
-		if(review.getSatus().equals(ReviewStatus.ACCEPTED))
+		System.out.println("review.getSatus()" + review.getSatus());
+		if (review.getSatus() == ReviewStatus.ACCEPTED)
 			newReview.setStatus(ReviewStatus.ACCEPTED);
-		else if(review.getSatus().equals(ReviewStatus.PENDING))
+		else if (review.getSatus() == ReviewStatus.PENDING)
 			newReview.setStatus(ReviewStatus.PENDING);
-		else if(review.getSatus().equals(ReviewStatus.REJECTED))
+		else if (review.getSatus() == ReviewStatus.REJECTED)
 			newReview.setStatus(ReviewStatus.REJECTED);
 
+		System.out.println("newReview" + newReview.getStatus());
+
 		Optional<Restaurant> maybeRestaurant = restaurantRepository.findByRestaurantid(review.getRestaurantid());
-		
+
 		if (maybeRestaurant.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "restaurant with id: " + review.getRestaurantid() + " does not exist");
-        }
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+					"restaurant with id: " + review.getRestaurantid() + " does not exist");
+		}
 		Restaurant restaurant = maybeRestaurant.get();
 		newReview.setRestaurant(restaurant);
-		
-		
-				
-				
-				
-				
-				
-				
-				
-		
-		
 
 		Optional<User> maybeUser = userRepository.findById(UUID.fromString(review.getUserid()));
 		User user = maybeUser.get();
